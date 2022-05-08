@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+* ::after ::before{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1rem;
+    font-family: $primary-font;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container{
+
+    margin: 1.75rem 10.313rem 8.25rem;
+    width: 1110px;
+}

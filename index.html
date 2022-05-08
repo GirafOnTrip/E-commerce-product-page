@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/design/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+
+  <body>
+
+  <div class="container">
+
+      <header>
+      <!-- NAVBAR -->
+        <nav class="nav">
+          
+          <div class="nav__content">
+
+            <a class="nav__img" href="#"><img src="/images/logo.svg" alt="logo"></a>
+
+            <ul class="nav__menu">
+
+              <li><a class="nav__link" href="#">Collections</a></li>
+              <li><a class="nav__link" href="#">Men</a></li>
+              <li><a class="nav__link" href="#">Women</a></li>
+              <li><a class="nav__link" href=#>About</a></li>
+              <li><a class="nav__link" href="#">Contact</a></li>
+
+            </ul>
+
+          </div>
+
+          <div class="nav__end">
+
+            <a href="#" class="nav__end__cart"><img src="/images/icon-cart.svg" alt=""></a>
+            <a href="#" class="nav__end__avatar"><img src="/images/image-avatar.png" alt=""></a>
+
+          </div>
+
+        </nav>  
+      </header>
+
+      <main>
+
+      <section class="product">
+
+        <div class="product__carrousel">
+          
+            <div class="product__carrousel__img">
+
+            <img src="/images/image-product-1.jpg" alt="Image 1 sneakers">
+
+            </div>
+
+            <div class="product__carrousel__thumbnail">
+              
+              <img src="/images/image-product-1-thumbnail.jpg" alt="thumbnail sneakers">
+              <img src="/images/image-product-2-thumbnail.jpg" alt="thumbnail sneakers">
+              <img src="/images/image-product-3-thumbnail.jpg" alt="thumbnail sneakers">
+              <img src="/images/image-product-4-thumbnail.jpg" alt="thumbnail sneakers">
+              
+
+            </div>
+            
+        </div>
+          
+        <div class="product__description">
+
+          <span class="product__description__category">Sneaker Company</span>
+
+          <h1 class="product__description__title">Fall Limited Edition Sneakers</h1>
+
+          <p class="product__description__p">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+          <div class="product__description-div">
+            <span class="product__description__lower-price">$125.00</span>
+            <span class="product__description__discount">50%</span>
+          </div>
+          <span class="product__description__price">$250.00</span>
+
+          <div class="product__btn">
+          <!-- BUTTON + - -->
+          <div class="product__button">
+            <button class="product__button__less-more">−</button>
+            <button class="product__button__number">0</button>
+            <button class="product__button__less-more">+</button>
+          </div>
+          
+
+          <!-- BUTTON CARD -->
+          <button class="product__button__cart">
+            <img class="product__button__cart__img" src="/images/icon-cart-white.svg" alt="">
+            <span class="product__button__cart__txt">Add to cart</span>
+          </button>
+          
+        </div>
+
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="javascript.js"></script>
+  </body>
+</html>
