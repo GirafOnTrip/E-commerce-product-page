@@ -17,6 +17,9 @@ html, body{
     font-family: $primary-font;
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    margin: 0;
+    
 }
 
 .container{
@@ -24,4 +27,5 @@ html, body{
     position: relative;
     margin: 1.75rem 10.313rem 8.25rem;
     width: 1110px;
+    
 }

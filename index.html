@@ -54,33 +54,45 @@
           </div>
 
         </nav>  
-      </header>
+      
 
       <!--CART MENU TOGGLE HIDDEN -->
 
       <div class="cart-menu">
 
         <h4 class="cart-menu__title">Cart</h4>
-        <div class="cart-menu__content add-item">
-          <div class="cart-menu__content__active">
+        <div class="cart-menu__content0">
+          
+          <div class="cart-menu__content hidden">
 
-            <div class="cart-menu__content__active-img">
-              <img src="/images/image-product-1-thumbnail.jpg" alt="">
+            <div class="cart-menu__content__active">
+
+                <div class="cart-menu__content__active-img">
+                  <img src="/images/image-product-1-thumbnail.jpg" alt="">
+                </div>
+
+                <div class="cart-menu__content__active-item">
+                  <div class="cart-menu__content__active-title">Fall Limited Edition Sneakers</div>
+                  <div class="cart-menu__content__active-details">
+                    <div class="cart-menu__content__active-details-price">$125.00</div> x
+                    <div class="cart-menu__content__active-details-counter">0</div>
+                    <div class="cart-menu__content__active-details-total">$0.00</div>
+                  </div>
+                </div>
+
+                <img class="cart-menu__content__active-delete" src="/images/icon-delete.svg" alt="icon delete">
+
             </div>
 
-            <div class="cart-menu__content__active-img">
-              <p class="cart-menu__content__active-title">Fall Limited Edition Sneakers</p>
-              <p class="cart-menu__content__active-price">salut</p>
-            </div>
-
-            <img class="cart-menu__content__active-delete" src="/images/icon-delete.svg" alt="">
+            <div class="cart-menu__content__active-btn">Checkout</div>
 
           </div>
-           <!-- <p class="cart-menu__content__active-btn">Checkout</p> -->
-        <!-- <span class="cart-menu__txt">Your cart is empty.</span> -->
+          <div class="cart-menu__txt">Your cart is empty.</div>
         </div>  
 
       </div>
+
+    </header>
 
 
 
@@ -94,16 +106,39 @@
           
             <div class="product__carrousel__img">
 
-            <img src="/images/image-product-1.jpg" alt="Image 1 sneakers">
+              <img class="product__carrousel__hero" src="/images/image-product-1.jpg" alt="Image 1 sneakers">
+
+              <div class="previous arrow">
+                <img src="/images/icon-previous.svg" alt="icon-previous">
+              </div>
+
+              <div class="next arrow">
+                <img src="/images/icon-next.svg" alt="icon-next">
+              </div>
 
             </div>
 
             <div class="product__carrousel__thumbnail">
               
-              <img src="/images/image-product-1-thumbnail.jpg" alt="thumbnail sneakers">
-              <img src="/images/image-product-2-thumbnail.jpg" alt="thumbnail sneakers">
-              <img src="/images/image-product-3-thumbnail.jpg" alt="thumbnail sneakers">
-              <img src="/images/image-product-4-thumbnail.jpg" alt="thumbnail sneakers">
+              <label>
+                <input class="product__carrousel__radio"  type="radio" name="test" value="small">
+                <img class= "thumbnail" src="/images/image-product-1.jpg" alt="thumbnail sneakers">
+              </label>
+
+              <label>
+                <input class="product__carrousel__radio" type="radio" name="test" value="small">
+                <img  class= "thumbnail" src="/images/image-product-2.jpg" alt="thumbnail sneakers">
+              </label>
+
+              <label>
+                <input class="product__carrousel__radio"  type="radio" name="test" value="small">
+                <img class= "thumbnail" src="/images/image-product-3.jpg" alt="thumbnail sneakers">
+              </label>
+
+              <label>
+                <input class="product__carrousel__radio" type="radio" name="test" value="small">
+                <img class= "thumbnail" src="/images/image-product-4.jpg" alt="thumbnail sneakers">
+              </label>
               
             </div>
             
@@ -146,7 +181,17 @@
       </section>
 
     </main>
-  </div>
+
+   
+
+    </div>
+
+    <div class="overlay hidden">
+        <div class="btnClose">
+          <img src="./images/icon-close.svg" alt="product close">
+        </div>
+    </div>
+   
 
   <script src="javascript.js"></script>
   </body>

@@ -12,6 +12,8 @@ html, body {
   font-family: "Kumbh Sans", Arial, sans-serif;
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  margin: 0;
 }
 
 .container {
@@ -123,6 +125,19 @@ html, body {
 .cart-menu.active {
   visibility: visible;
 }
+.cart-menu__content0 {
+  min-height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-menu__txt {
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 200;
+}
+.cart-menu__txt.hidden {
+  display: none;
+}
 .cart-menu__title {
   font-weight: 400;
   padding-bottom: 24px;
@@ -132,16 +147,20 @@ html, body {
 }
 .cart-menu__content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 188px;
+}
+.cart-menu__content.hidden {
+  display: none;
 }
 .cart-menu__content__active {
   display: flex;
-  margin: 24px;
-}
-.cart-menu__content__active-title {
-  font-size: 14px;
-  color: hsl(220deg, 13%, 13%);
-  margin-left: 16px;
+  flex-direction: row;
+  margin-bottom: 24px;
+  width: 312px;
+  height: 52px;
 }
 .cart-menu__content__active-img {
   width: 50px;
@@ -153,9 +172,42 @@ html, body {
   object-fit: cover;
   width: 100%;
 }
-.cart-menu__txt {
+.cart-menu__content__active-item {
+  font-size: 14px;
   color: hsl(219deg, 9%, 45%);
-  font-weight: 200;
+  margin-left: 16px;
+  margin-right: 45px;
+}
+.cart-menu__content__active-details {
+  display: flex;
+  gap: 0.6rem;
+  line-height: 2.1rem;
+}
+.cart-menu__content__active-details-total {
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+.cart-menu__content__active-delete {
+  width: 14px;
+}
+.cart-menu__content__active-delete:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.cart-menu__content__active-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  width: 312px;
+  height: 56px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cart-menu__content__active-btn:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
 }
 
 /* End cart menu toggle */
@@ -171,7 +223,36 @@ html, body {
 .product__carrousel {
   width: 445px;
 }
-.product__carrousel__img img {
+.product__carrousel__img {
+  position: relative;
+}
+.product__carrousel__img .previous {
+  left: 4%;
+}
+.product__carrousel__img .previous:hover {
+  left: 3%;
+}
+.product__carrousel__img .next {
+  right: 4%;
+}
+.product__carrousel__img .next:hover {
+  right: 3%;
+}
+.product__carrousel__img .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.product__carrousel__hero {
   width: 445px;
   height: 445px;
   border-radius: 15px;
@@ -185,10 +266,19 @@ html, body {
 .product__carrousel__thumbnail img {
   border-radius: 10px;
   width: 88px;
+  border: 3px transparent solid;
   cursor: pointer;
 }
 .product__carrousel__thumbnail img:hover {
   opacity: 0.5;
+}
+.product__carrousel__radio {
+  position: absolute;
+  visibility: hidden;
+}
+.product__carrousel__radio:checked + img {
+  opacity: 0.5;
+  border: 3px hsl(26deg, 100%, 55%) solid;
 }
 
 /* End section -- carrousel */
@@ -294,5 +384,49 @@ html, body {
 }
 
 /* End section -- description */
+/* Start Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overlay .btnClose {
+  width: 27.5rem;
+  text-align: end;
+  margin-bottom: 1rem;
+}
+.overlay .btnClose img {
+  cursor: pointer;
+  filter: brightness(300);
+}
+.overlay .product__carrousel {
+  max-width: 57rem;
+}
+.overlay .product__carrousel .next {
+  display: flex;
+  right: 0;
+  transform: translate(50%);
+}
+.overlay .product__carrousel .next.arrow {
+  top: 45%;
+}
+.overlay .product__carrousel .previous {
+  display: flex;
+  left: 0;
+  transform: translate(-50%);
+}
+.overlay .product__carrousel .previous.arrow {
+  top: 46%;
+}
+.overlay.hidden {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

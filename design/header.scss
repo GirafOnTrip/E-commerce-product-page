@@ -1,0 +1,262 @@
+/* NAV-BAR */
+/* Start nav-bar */
+.nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.125rem;
+    padding-bottom: 1.675rem;
+    border-bottom: 1px solid $neutral-5;
+
+    &__content{
+
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: fit-content;
+    }
+
+    & ul{
+
+        display: flex; 
+    }
+    
+    & li{
+
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin : 0 1rem;
+        
+        & a{
+
+            text-decoration: none;
+            color: $neutral-2;
+            position: relative;
+            padding: 42px 0px;
+
+            &:hover{
+
+                color: black;
+
+                &::before{
+
+                    content:"";
+                    position: absolute;
+                    background-color: $primary-color;
+                    height: 3px;
+                    width: 100%;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__end{
+
+        display: flex;
+        align-items: center;
+
+        &__cart{
+
+            cursor: default;
+            position: relative;
+
+            & img{
+
+                cursor: pointer;
+
+                &:hover{
+
+                    filter:contrast(30);
+                }
+            }
+
+            & span{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 17px;
+                left: 9px;
+                width: 17px;
+                height: 12px;
+                border-radius: 8px;
+                background-color: $primary-color;
+                font-size: 10px;
+                color: $white;
+                visibility: hidden;
+            }
+        }
+        
+        &__avatar{
+
+            cursor: default;
+
+            & img { 
+
+                width: 50px;
+                margin: 4px;
+                margin-left: 46px;
+                border: 3px transparent solid;
+                cursor: pointer;
+                
+                &:hover{
+
+                    border: 3px $primary-color solid;
+                    border-radius: 50px;  
+                }
+            }
+        }
+    }
+}
+
+/* End nav-bar */
+/* Start cart menu toggle */
+
+.cart-menu{
+
+    position:absolute;
+    width: 360px;
+    height: 256px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 15px 26px -7px #878787; 
+    box-shadow: 1px 15px 26px -7px #878787;
+    background-color: $white;
+    left: 820px;
+    top: 60px;
+    visibility: hidden;
+
+    &.active{
+
+        visibility: visible;
+    }
+
+    &__content0{
+
+        min-height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__txt{
+
+        
+        color: $neutral-2;
+        font-weight: 200;
+
+        &.hidden{
+
+            display: none;
+        }
+    }
+
+    &__title{
+
+        font-weight: 400;
+        padding-bottom: 24px;
+        padding-left: 24px;
+        margin-bottom: 0;
+        border-bottom: 1px solid $neutral-5;
+    }
+
+    &__content{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 188px;
+
+        &.hidden{
+
+            display: none;
+        }
+
+        // With items in cart
+
+        &__active{
+
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 24px;
+            width: 312px;
+            height: 52px;
+
+            &-img{
+
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            overflow: hidden;
+            
+                & img{
+
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+           
+            &-item{
+
+                font-size: 14px;
+                color: $neutral-2;
+                margin-left: 16px; 
+                margin-right: 45px; 
+                
+            }
+
+            &-details{
+
+                display: flex;
+                gap: 0.6rem;
+                line-height: 2.1rem;
+
+                &-total{
+
+                    font-weight: 700;
+                    color: $black;
+                }
+            }
+
+            &-delete{
+
+                width: 14px;
+                
+                &:hover{
+
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+  
+        &__active-btn{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: $primary-color;
+            color: $white;
+            
+            width: 312px;
+            height: 56px;
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            &:hover{
+
+            opacity: 0.70;
+            transition: all 0.2s;
+            }
+        }
+    }
+
+}
+
+/* End cart menu toggle */
