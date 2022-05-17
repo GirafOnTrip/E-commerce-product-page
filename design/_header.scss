@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /* NAV-BAR */
 /* Start nav-bar */
 .nav{
@@ -15,6 +17,11 @@
         align-items: center;
         width: 50%;
         height: fit-content;
+    }
+
+    &__mobile-menu{
+
+        display: none;
     }
 
     & ul{
@@ -142,18 +149,6 @@
         justify-content: center;
     }
 
-    &__txt{
-
-        
-        color: $neutral-2;
-        font-weight: 200;
-
-        &.hidden{
-
-            display: none;
-        }
-    }
-
     &__title{
 
         font-weight: 400;
@@ -163,6 +158,18 @@
         border-bottom: 1px solid $neutral-5;
     }
 
+    &__txt{
+
+        color: $neutral-2;
+        font-weight: 200;
+
+        &.hidden{
+
+            display: none;
+        }
+    }
+
+   
     &__content{
 
         display: flex;

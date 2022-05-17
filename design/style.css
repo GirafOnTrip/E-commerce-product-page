@@ -1,3 +1,4 @@
+/* MOBILE BREAKPOINT */
 * ::after ::before {
   padding: 0;
   margin: 0;
@@ -37,6 +38,9 @@ html, body {
   align-items: center;
   width: 50%;
   height: fit-content;
+}
+.nav__mobile-menu {
+  display: none;
 }
 .nav ul {
   display: flex;
@@ -131,19 +135,19 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-.cart-menu__txt {
-  color: hsl(219deg, 9%, 45%);
-  font-weight: 200;
-}
-.cart-menu__txt.hidden {
-  display: none;
-}
 .cart-menu__title {
   font-weight: 400;
   padding-bottom: 24px;
   padding-left: 24px;
   margin-bottom: 0;
   border-bottom: 1px solid hsla(220deg, 14%, 75%, 0.3);
+}
+.cart-menu__txt {
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 200;
+}
+.cart-menu__txt.hidden {
+  display: none;
 }
 .cart-menu__content {
   display: flex;
@@ -217,11 +221,7 @@ html, body {
   justify-content: space-between;
   margin: 0 auto;
   width: 1015px;
-  height: 565px;
   margin-top: 90px;
-}
-.product__carrousel {
-  width: 445px;
 }
 .product__carrousel__img {
   position: relative;
@@ -251,6 +251,7 @@ html, body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: none;
 }
 .product__carrousel__hero {
   width: 445px;
@@ -427,6 +428,145 @@ html, body {
 }
 .overlay.hidden {
   display: none;
+}
+
+/* End Overlay */
+/* Start mobile breakpoints */
+@media all and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* NAV BAR MOBILE */
+  /* Start nav-bar */
+  .nav {
+    height: 4.25rem;
+    padding-bottom: 2px;
+  }
+  .nav__content {
+    width: 100%;
+  }
+  .nav__mobile-menu {
+    display: flex;
+    margin: 24px;
+    transform: scale(1.1);
+  }
+  .nav__img {
+    transform: scale(1.1);
+  }
+  .nav li {
+    display: none;
+  }
+  .nav__end__cart {
+    transform: scale(1);
+  }
+  .nav__end__avatar {
+    transform: scale(0.5);
+  }
+  .nav__end__avatar img {
+    margin-left: 0;
+    margin: 10px;
+  }
+
+  /* End nav-bar */
+  /* Start cart menu toggle */
+  .cart-menu {
+    left: 40px;
+    top: 85px;
+    z-index: 1;
+  }
+  .cart-menu__title {
+    font-weight: 600;
+  }
+  .cart-menu__txt {
+    font-weight: 500;
+  }
+
+  /* End cart menu toggle */
+  /* IMAGE PRODUCT */
+  /* Start section -- carrousel */
+  .product {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    margin-top: 0;
+  }
+  .product__carrousel__thumbnail {
+    display: none;
+  }
+  .product__carrousel__hero {
+    border-radius: 0;
+  }
+  .product .arrow {
+    display: flex;
+  }
+
+  /* End section -- carrousel */
+  /* Start section -- description */
+  .product__description {
+    width: 375px;
+    margin: 0px 20px 88px 20px;
+  }
+  .product__description__category {
+    font-weight: 600;
+  }
+  .product__description__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+  .product__description__div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .product__description-div {
+    align-items: flex-start;
+    width: fit-content;
+  }
+  .product__description__lower-price {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .product__description__discount {
+    transform: scale(1.2);
+    font-weight: 600;
+    padding: 2px 7px;
+  }
+  .product__description__price {
+    font-size: 16px;
+  }
+  .product__description .product__btn {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+  }
+  .product__description .product__button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .product__description .product__button__less-more {
+    font-size: 26px;
+  }
+  .product__description .product__button__number {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .product__description .product__button__cart {
+    width: 100%;
+    margin-left: 0;
+  }
+  .product__description .product__button__cart__img {
+    width: 19px;
+  }
+  .product__description .product__button__cart__txt {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* DESCRIPTION PRODUCT */
 }
 
 /*# sourceMappingURL=style.css.map */

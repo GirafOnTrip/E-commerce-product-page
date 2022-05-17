@@ -1,0 +1,73 @@
+@use 'variables' as *;
+
+
+/* Start Overlay */
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: $black-opacity;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .btnClose{
+
+        width: 27.5rem;
+        text-align: end;
+        margin-bottom: 1rem;
+        
+
+        img{
+            cursor: pointer;
+            filter: brightness(300);
+        }
+    }
+
+    .product__carrousel{
+
+        max-width: 57rem;
+
+        .next{
+
+            display: flex;
+            right: 0;
+            transform: translate(50%);
+
+            &.arrow {
+
+                top: 45%;
+            }
+            
+        }
+
+        .previous{
+
+            display: flex;
+            left: 0;
+            transform: translate(-50%);
+
+            &.arrow {
+
+                top: 46%;
+            }
+        }
+
+        
+    }
+
+    &.hidden{
+
+        display: none;
+    }
+}
+
+/* End Overlay */
+

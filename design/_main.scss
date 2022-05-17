@@ -1,0 +1,244 @@
+@use 'variables' as *;
+@use 'breakpoints' as *;
+
+/* Start section -- carrousel */
+
+.product{
+
+    display: flex;  
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1015px;
+    margin-top: 90px;
+  
+    &__carrousel{
+  
+      
+      &__img{
+  
+          position: relative;
+  
+          .previous{
+  
+              left: 4%;
+  
+              &:hover{
+                  left: 3%;
+              }
+           }
+   
+           .next{
+   
+               right: 4%;
+  
+               &:hover{
+                   right: 3%;
+               }
+           }
+   
+           .arrow{
+   
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+  
+               background-color: $white;
+               border-radius: 50%;
+               width: 2.5rem;
+               height: 2.5rem;
+  
+               display: flex;
+               align-items: center;
+               justify-content: center;
+  
+               cursor: pointer;
+  
+               transition: all 0.3s ease;
+               display: none;
+               
+           }
+      }
+  
+      &__hero{
+  
+          width: 445px;
+          height: 445px;
+          border-radius: 15px;
+          margin-bottom: 32px;
+          cursor: pointer;
+      }
+  
+      &__thumbnail{
+          
+          display: flex;
+          justify-content: space-between;
+  
+          & img{
+  
+              border-radius: 10px;
+              width: 88px;
+              border: 3px transparent solid;
+              cursor: pointer;
+  
+              &:hover{
+  
+                  opacity: 0.5;
+              }
+          }
+      }
+  
+      &__radio{
+  
+          position: absolute;
+          visibility: hidden;
+  
+          &:checked + img{
+  
+              opacity: 0.5;
+              border: 3px $primary-color solid;
+          } 
+      }
+    }
+  }
+  
+  /* End section -- carrousel */
+  /* Start section -- description */
+  
+  .product__description{
+  
+      width: 445px;
+      margin: auto 0;
+  
+      &__category{
+  
+          text-transform: uppercase;
+          font-size: 13px;
+          letter-spacing: 2.5px;
+          color: $primary-color;
+      }
+  
+      &__title{
+  
+          font-size: 44px;
+          font-weight: 400;
+          margin-top: 24px;
+      }
+  
+      &__p{
+  
+          color: $neutral-2;
+          line-height: 1.6;
+          margin-bottom: 24px;
+      }
+  
+      &-div{
+  
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+      }
+  
+      &__lower-price{
+  
+          font-size: 24px;
+          font-weight: 400;
+      }
+  
+      &__discount{
+  
+          display: inline-block;
+          
+          background-color: $secondary-color;
+          color: $primary-color;
+          padding: 3px 9px;
+          font-size: 13px;
+          border-radius: 6px;
+          margin-left: 17px;
+      }
+  
+      &__price{
+  
+          color: $neutral-3;
+          text-decoration: line-through;
+          font-size: 13px;
+      }
+  }
+  
+  .product__btn{
+  
+      display: flex;
+      margin-top: 28px;
+  }
+  
+  .product__button{
+  
+      display: flex;
+      background-color: $neutral-4;
+      border: none;
+      border-radius: 8px;
+  
+      &__less-more{
+  
+          font-size: 20px;
+          font-weight: bold;
+          color: $primary-color;
+          cursor: pointer;
+  
+          &:hover{
+  
+              opacity: .70;
+          }
+      }
+  
+      & button, input{
+  
+          border: none;
+          background-color: transparent;
+          padding: 15px;
+          width: fit-content;
+      }
+  
+      &__cart{
+  
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 56px;
+          width: 272px;
+          margin-left: 12px;
+          border-radius: 8px;
+          border: none;
+          background-color: $primary-color;
+          color: $white;
+          font-weight: 300;
+          transition: all 0.1s;
+          
+  
+          &:hover{
+  
+              cursor: pointer;
+              -webkit-box-shadow: -1px 8px 41px -16px $primary-color; 
+              box-shadow: -1px 8px 41px -16px $primary-color;
+              opacity: 0.70;
+          
+             }
+  
+          & img + span{
+  
+              margin: 0 10px;
+          }
+  
+          &__img{
+  
+             width: 16px;
+          }
+  
+          &__txt{
+  
+              font-size: 16px;
+          }
+      }
+  }
+  
+  /* End section -- description */
+
