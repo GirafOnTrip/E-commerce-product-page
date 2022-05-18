@@ -24,6 +24,11 @@ const overlay         = document.querySelector(".overlay");
 const productCarrousel= document.querySelector(".product__carrousel");  
 const closeOverlay    = document.querySelector(".btnClose"); 
 
+const mobileMenu      = document.querySelector(".mobileNav");  
+const mobileMenuOpen  = document.querySelector(".nav__mobile-menu");
+const mobileMenuClose = document.querySelector(".mobileNav__close");
+
+
 let overlayGallery;
 let overlayHeroImg; 
 
@@ -31,11 +36,13 @@ let overlayHeroImg;
 
 // LISTENERS
 
-cartOpen.addEventListener("click", openCart);
+mobileMenuOpen.addEventListener("click", openMobileMenu);
+mobileMenuClose.addEventListener("click", closeMobileMenu);
 
 btnLess.addEventListener("click", less);
 btnPlus.addEventListener("click", plus);
 
+cartOpen.addEventListener("click", openCart);
 addCart.addEventListener("click", updateCart);
 cartBtnDelete.addEventListener("click", cartDelete);
 
@@ -173,6 +180,20 @@ function onThumbClickOverlay(event){
  
     overlayHeroImg.src = event.target.src;
 }
+
+// MOBILE FUNCTION
+
+function openMobileMenu(){
+
+        mobileMenu.classList.remove('hidden'); 
+};
+
+function closeMobileMenu(){
+
+    mobileMenu.classList.add('hidden');
+}
+
+
 
 
 

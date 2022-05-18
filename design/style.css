@@ -180,7 +180,7 @@ html, body {
   font-size: 14px;
   color: hsl(219deg, 9%, 45%);
   margin-left: 16px;
-  margin-right: 45px;
+  margin-right: 35px;
 }
 .cart-menu__content__active-details {
   display: flex;
@@ -434,7 +434,8 @@ html, body {
 /* Start mobile breakpoints */
 @media all and (max-width: 600px) {
   .container {
-    max-width: 100%;
+    width: 100%;
+    min-width: 265px;
     margin: 0;
   }
 
@@ -484,20 +485,25 @@ html, body {
   }
 
   /* End cart menu toggle */
-  /* IMAGE PRODUCT */
+  /* PRODUCT */
   /* Start section -- carrousel */
   .product {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: max-content;
     margin-top: 0;
+  }
+  .product__carrousel {
+    width: 100vw;
   }
   .product__carrousel__thumbnail {
     display: none;
   }
   .product__carrousel__hero {
     border-radius: 0;
+    width: 100%;
+    height: auto;
   }
   .product .arrow {
     display: flex;
@@ -506,8 +512,8 @@ html, body {
   /* End section -- carrousel */
   /* Start section -- description */
   .product__description {
-    width: 375px;
-    margin: 0px 20px 88px 20px;
+    width: 80%;
+    margin-bottom: 88px;
   }
   .product__description__category {
     font-weight: 600;
@@ -566,7 +572,41 @@ html, body {
     font-weight: 600;
   }
 
-  /* DESCRIPTION PRODUCT */
+  /* End section -- description */
+  /* MOBILE MENU OVERLAY */
+  .mobileNav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsla(0deg, 0%, 0%, 0.75);
+  }
+  .mobileNav.hidden {
+    display: none;
+  }
+  .mobileNav__sidebar {
+    width: 70%;
+    min-height: 100%;
+    background-color: hsl(0deg, 0%, 100%);
+  }
+  .mobileNav__close {
+    margin: 24px 0px 35px 24px;
+  }
+  .mobileNav__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 200px;
+    padding-left: 24px;
+  }
+  .mobileNav__link {
+    text-decoration: none;
+    color: hsl(0deg, 0%, 0%);
+    font-weight: 600;
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

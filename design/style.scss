@@ -17,7 +17,8 @@
 
     .container{
 
-        max-width: 100%;
+        width: 100%;
+        min-width: 265px;
         margin: 0;
     }
 
@@ -96,7 +97,7 @@
 
     /* End cart menu toggle */
 
-    /* IMAGE PRODUCT */
+    /* PRODUCT */
 
     /* Start section -- carrousel */
 
@@ -104,11 +105,13 @@
 
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 100vw;
         height: max-content;
         margin-top: 0;
 
         &__carrousel{
+
+            width: 100vw;
 
             &__thumbnail{
 
@@ -117,7 +120,9 @@
 
             &__hero{
 
-                border-radius: 0;
+               border-radius: 0;
+               width: 100%;
+               height: auto;
             }
         }
 
@@ -132,8 +137,8 @@
 
     .product__description{
 
-        width: 375px;
-        margin: 0px 20px 88px 20px;
+        width: 80%;
+        margin-bottom: 88px;
 
         &__category{
 
@@ -217,15 +222,68 @@
             font-size: 18px;
             font-weight: 600;
         }
- 
     }
-
+    }
     
 
+    /* End section -- description */
+
+    /* MOBILE MENU OVERLAY */
+
+    .mobileNav{
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        background-color: $black-opacity;
+
+        &.hidden{
+
+            display: none;
+        }
+        
+
+        &__sidebar{
+
+            width:70%;
+            min-height: 100%;
+            background-color: $white;
+        }
+
+        &__close{
+
+            // margin-top: 24px;
+            // margin-left: 24px;
+            margin: 24px 0px 35px 24px;
+            
+        }
+
+        &__menu{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            list-style-type: none;
+            height: 200px;
+            padding-left: 24px;
+        }
+
+        &__link{
+
+            text-decoration: none;
+            color: $black;
+            font-weight: 600;
+            font-size: 18px;
+
+        }
+
     }
 
 
-    /* DESCRIPTION PRODUCT */
+    
 
 
 
