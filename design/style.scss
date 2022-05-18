@@ -8,7 +8,64 @@
 @use 'main';
 @use 'overlay';
 
-// MOBILE
+
+/* TABLET */
+
+@include tablet{
+
+    .product{
+
+        flex-direction: column;
+        align-items: center;
+        gap: 3.125rem;
+    }
+
+    .product__description{
+
+        margin-bottom: 5.625rem;
+    }
+}
+
+/* TABLET MINI */
+
+@include tablet-mini{
+
+    .container{
+
+        width: 100%;
+    }
+
+    .nav{
+
+        margin: 0 2.5rem;
+
+    
+        &__mobile-menu{
+
+            display: flex;
+            margin: 1.5rem;
+            transform: scale(1.1); 
+        }
+
+        &__img{
+
+            transform: scale(1.1);
+        }
+
+        li{
+
+            display: none;
+        }
+    }
+
+    .cart-menu{
+
+        right: 2%;
+    }
+}
+
+
+/* MOBILE */
 
 /* Start mobile breakpoints */
 
@@ -18,8 +75,13 @@
     .container{
 
         width: 100%;
-        min-width: 265px;
+        min-width: 16.563rem;
         margin: 0;
+    }
+
+    main{
+
+        width: 90%;
     }
 
     /* NAV BAR MOBILE */
@@ -28,8 +90,9 @@
 
     .nav{
 
+        margin: 0;
         height: 4.25rem;
-        padding-bottom: 2px;
+        padding-bottom: 0.125rem;
         
 
         &__content{
@@ -40,7 +103,7 @@
         &__mobile-menu{
 
             display: flex;
-            margin: 24px;
+            margin: 1.5rem;
             transform: scale(1.1); 
         }
 
@@ -69,7 +132,7 @@
                 & img {
 
                     margin-left: 0;
-                    margin: 10px;
+                    margin: 0.625rem;
                 }
             }
         }
@@ -80,10 +143,12 @@
 
     .cart-menu{
 
-        left: 40px;
-        top:85px;
+        left: 0;
+        right: 0;
+        top: 5.313rem;
+        margin: 0 auto;
         z-index: 1;
-
+       
         &__title{
 
             font-weight: 600;
@@ -105,9 +170,9 @@
 
         flex-direction: column;
         align-items: center;
-        width: 100vw;
         height: max-content;
         margin-top: 0;
+        gap: 0;
 
         &__carrousel{
 
@@ -137,8 +202,8 @@
 
     .product__description{
 
-        width: 80%;
-        margin-bottom: 88px;
+        width: 100%;
+        margin-bottom: 5.5rem;
 
         &__category{
 
@@ -147,9 +212,9 @@
 
         &__title{
 
-            font-size: 28px;
+            font-size: 1.75rem;
             font-weight: 700;
-            margin-top: 16px;
+            margin-top: 1rem;
         }
 
         &__div{
@@ -166,7 +231,7 @@
 
         &__lower-price{
 
-            font-size: 28px;
+            font-size: 1.75rem;
             font-weight: 700;
         }
 
@@ -174,12 +239,12 @@
 
             transform: scale(1.2);
             font-weight: 600;
-            padding: 2px 7px;
+            padding: 0.125rem 0.438rem;
         }
 
         &__price{
   
-           font-size: 16px;
+           font-size: 1rem;
         }
 
     .product__btn{
@@ -187,7 +252,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 130px;
+        height: 8.125rem;
     }
 
     .product__button{
@@ -197,12 +262,12 @@
 
         &__less-more{
 
-            font-size: 26px;
+            font-size: 1.625rem;
         }
 
         &__number{
 
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 600;
         }
     }
@@ -214,12 +279,12 @@
 
         &__img{
 
-            width: 19px;
+            width: 1.188rem;
         }
 
         &__txt{
 
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 600;
         }
     }
@@ -227,66 +292,6 @@
     
 
     /* End section -- description */
-
-    /* MOBILE MENU OVERLAY */
-
-    .mobileNav{
-
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        
-        background-color: $black-opacity;
-
-        &.hidden{
-
-            display: none;
-        }
-        
-
-        &__sidebar{
-
-            width:70%;
-            min-height: 100%;
-            background-color: $white;
-        }
-
-        &__close{
-
-            // margin-top: 24px;
-            // margin-left: 24px;
-            margin: 24px 0px 35px 24px;
-            
-        }
-
-        &__menu{
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            list-style-type: none;
-            height: 200px;
-            padding-left: 24px;
-        }
-
-        &__link{
-
-            text-decoration: none;
-            color: $black;
-            font-weight: 600;
-            font-size: 18px;
-
-        }
-
-    }
-
-
-    
-
-
-
 
   }
 

@@ -7,8 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3.125rem;
-    padding-bottom: 1.675rem;
+    height: 7rem;
     border-bottom: 1px solid $neutral-5;
 
     &__content{
@@ -41,7 +40,7 @@
             text-decoration: none;
             color: $neutral-2;
             position: relative;
-            padding: 42px 0px;
+            padding: 2.875rem 0;
 
             &:hover{
 
@@ -52,7 +51,7 @@
                     content:"";
                     position: absolute;
                     background-color: $primary-color;
-                    height: 3px;
+                    height: 0.188rem;
                     width: 100%;
                     bottom: 0;
                 }
@@ -86,13 +85,13 @@
                 align-items: center;
                 justify-content: center;
                 position: absolute;
-                bottom: 17px;
-                left: 9px;
-                width: 17px;
-                height: 12px;
-                border-radius: 8px;
+                bottom: 1.063rem;
+                left: 0.563rem;
+                width: 1.063rem;
+                height: 0.75rem;
+                border-radius: 0.5rem;
                 background-color: $primary-color;
-                font-size: 10px;
+                font-size: 0.625rem;
                 color: $white;
                 visibility: hidden;
             }
@@ -104,16 +103,16 @@
 
             & img { 
 
-                width: 50px;
-                margin: 4px;
-                margin-left: 46px;
+                width: 3.125rem;
+                margin: 0.25rem;
+                margin-left: 2.875rem;
                 border: 3px transparent solid;
                 cursor: pointer;
                 
                 &:hover{
 
                     border: 3px $primary-color solid;
-                    border-radius: 50px;  
+                    border-radius: 3.125rem;  
                 }
             }
         }
@@ -126,14 +125,15 @@
 .cart-menu{
 
     position:absolute;
-    width: 360px;
-    height: 256px;
-    border-radius: 10px;
+    width: 22.5rem;
+    height: 16rem;
+    border-radius: 0.625rem;
     -webkit-box-shadow: 1px 15px 26px -7px #878787; 
     box-shadow: 1px 15px 26px -7px #878787;
     background-color: $white;
-    left: 820px;
-    top: 60px;
+    right: -3%;
+    top: 5.313rem;
+    z-index: 2;
     visibility: hidden;
 
     &.active{
@@ -152,8 +152,8 @@
     &__title{
 
         font-weight: 400;
-        padding-bottom: 24px;
-        padding-left: 24px;
+        padding-bottom: 1.5rem;
+        padding-left: 1.5rem;
         margin-bottom: 0;
         border-bottom: 1px solid $neutral-5;
     }
@@ -176,7 +176,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 188px;
+        height: 11.75rem;
 
         &.hidden{
 
@@ -189,16 +189,16 @@
 
             display: flex;
             flex-direction: row;
-            margin-bottom: 24px;
-            width: 312px;
-            height: 52px;
+            margin-bottom: 1.5rem;
+            width: 19.5rem;
+            height: 3.25rem;
 
           
             &-img{
 
-            width: 50px;
-            height: 50px;
-            border-radius: 4px;
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 0.25rem;
             overflow: hidden;
             
                 & img{
@@ -210,10 +210,10 @@
            
             &-item{
 
-                font-size: 14px;
+                font-size: 0.875rem;
                 color: $neutral-2;
-                margin-left: 16px; 
-                margin-right: 35px; 
+                margin-left: 1rem; 
+                margin-right: 2.188rem; 
                 
             }
 
@@ -232,7 +232,7 @@
 
             &-delete{
 
-                width: 14px;
+                width: 0.875rem;
                 
                 &:hover{
 
@@ -251,9 +251,9 @@
             background-color: $primary-color;
             color: $white;
             
-            width: 312px;
-            height: 56px;
-            border-radius: 10px;
+            width: 19.5rem;
+            height: 3.5rem;
+            border-radius: 0.625rem;
 
             cursor: pointer;
 

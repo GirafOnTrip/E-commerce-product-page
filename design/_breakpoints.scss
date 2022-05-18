@@ -1,7 +1,20 @@
-/* MOBILE BREAKPOINT */
 
 @mixin mobile {
     @media all and (max-width: 600px){
     @content
     }  
 };
+
+@mixin tablet-mini{
+
+    @media all and (max-width: 950px){
+        @content
+        } 
+};
+
+@mixin tablet {
+
+    @media all and (max-width: 1200px){
+        @content
+        } 
+}

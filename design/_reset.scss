@@ -18,14 +18,21 @@ html, body{
     min-height: 100vh;
     width: 100%;
     position: relative;
-    margin: 0;
-    
+    margin: 0;  
 }
 
 .container{
 
     position: relative;
-    margin: 1.75rem 10.313rem 8.25rem;
-    width: 1110px;
-    
+    margin: 0 10.313rem 8.25rem;
+    width: 80%;
+    max-width: 1440px;
+    height: 100vh;
+}
+
+main{
+
+    width: 80%;
+    height: auto;
+    margin: auto;
 }

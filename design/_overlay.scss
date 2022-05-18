@@ -16,24 +16,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
+    .product__overlay{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 3.75rem;
+    }
 
     .btnClose{
 
-        width: 27.5rem;
+        width: 35.5rem;
         text-align: end;
-        margin-bottom: 1rem;
+        margin-bottom: 7rem;
         
-
         img{
             cursor: pointer;
             filter: brightness(300);
+            scale: 1.3;
         }
     }
 
     .product__carrousel{
 
         max-width: 57rem;
+        transform: scale(1.3);
 
         .next{
 
@@ -44,8 +51,7 @@
             &.arrow {
 
                 top: 45%;
-            }
-            
+            }     
         }
 
         .previous{
@@ -58,9 +64,7 @@
 
                 top: 46%;
             }
-        }
-
-        
+        }        
     }
 
     &.hidden{
@@ -70,4 +74,56 @@
 }
 
 /* End Overlay */
+
+/* MOBILE MENU OVERLAY */
+/* Start Mobile Overlay */
+
+.mobileNav{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: $black-opacity;
+
+    &.hidden{
+
+        display: none;
+    }
+    
+
+    &__sidebar{
+
+        width:70%;
+        min-height: 100%;
+        background-color: $white;
+    }
+
+    &__close{
+
+        margin: 1.5rem 0 2.188rem 1.5rem;  
+    }
+
+    &__menu{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+        height: 12.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &__link{
+
+        text-decoration: none;
+        color: $black;
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+}
+
+/* End Mobile Overlay */
 

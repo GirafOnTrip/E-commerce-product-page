@@ -33,7 +33,6 @@ let overlayGallery;
 let overlayHeroImg; 
 
 
-
 // LISTENERS
 
 mobileMenuOpen.addEventListener("click", openMobileMenu);
@@ -51,7 +50,6 @@ closeOverlay.addEventListener("click", closeLightbox);
 
 btnNext.addEventListener('click', btnClickNext);
 btnPrevious.addEventListener('click', btnClickPrevious);
-
 
 thumbnail.forEach(img => {
 
@@ -149,7 +147,7 @@ function cartDelete(){
 
 function onHeroImgClick(){
 
-    if(window.innerWidth >= 1440) {
+    if(window.innerWidth >= 1200) {
 
         if(overlay.childElementCount == 1) {
 
@@ -165,6 +163,8 @@ function onHeroImgClick(){
 
             const btnOverlayNext        = overlay.querySelector(".next");
             const btnOverlayPrevious    = overlay.querySelector(".previous");
+            btnOverlayNext.addEventListener('click', btnClickNextOverlay);
+            btnOverlayPrevious.addEventListener('click', btnClickPreviousOverlay);
         }
 
         overlay.classList.remove('hidden');
@@ -181,11 +181,43 @@ function onThumbClickOverlay(event){
     overlayHeroImg.src = event.target.src;
 }
 
-// MOBILE FUNCTION
+function btnClickNextOverlay(){
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex++;
+    if(imageIndex > 4){
+        imageIndex = 1;
+    }
+
+    setOverlayHeroImage(imageIndex);
+} 
+
+function btnClickPreviousOverlay(){
+
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex--;
+    if(imageIndex < 1){
+        imageIndex = 4;
+    }
+
+    setOverlayHeroImage(imageIndex);
+}
+
+function getOverlayCurrentImageIndex() {
+
+    const imageIndex = parseInt(overlayHeroImg.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-',''));
+    return imageIndex;
+}
+
+function setOverlayHeroImage(imageIndex){
+
+    overlayHeroImg.src = `./images/image-product-${imageIndex}.jpg`;    
+}
+
+// MOBILE / TABLET MINI FUNCTION
 
 function openMobileMenu(){
 
-        mobileMenu.classList.remove('hidden'); 
+    mobileMenu.classList.remove('hidden'); 
 };
 
 function closeMobileMenu(){
