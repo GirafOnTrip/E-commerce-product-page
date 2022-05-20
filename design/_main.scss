@@ -114,6 +114,7 @@
   
           text-transform: uppercase;
           font-size: 0.813rem;
+          font-weight: 600;
           letter-spacing: 0.156rem;
           color: $primary-color;
       }
@@ -121,7 +122,7 @@
       &__title{
   
           font-size: 2.75rem;
-          font-weight: 400;
+          font-weight: 600;
           margin-top: 1.5rem;
       }
   
@@ -130,6 +131,7 @@
           color: $neutral-2;
           line-height: 1.6;
           margin-bottom: 1.5rem;
+          font-weight: 500;
       }
   
       &-div{
@@ -142,7 +144,7 @@
       &__lower-price{
   
           font-size: 1.5rem;
-          font-weight: 400;
+          font-weight: 600;
       }
   
       &__discount{

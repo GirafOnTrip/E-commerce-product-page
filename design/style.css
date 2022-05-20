@@ -14,6 +14,7 @@ html, body {
   width: 100%;
   position: relative;
   margin: 0;
+  touch-action: manipulation;
 }
 
 .container {
@@ -299,18 +300,20 @@ main {
 .product__description__category {
   text-transform: uppercase;
   font-size: 0.813rem;
+  font-weight: 600;
   letter-spacing: 0.156rem;
   color: hsl(26deg, 100%, 55%);
 }
 .product__description__title {
   font-size: 2.75rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 1.5rem;
 }
 .product__description__p {
   color: hsl(219deg, 9%, 45%);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 .product__description-div {
   display: flex;
@@ -319,7 +322,7 @@ main {
 }
 .product__description__lower-price {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 .product__description__discount {
   display: inline-block;
