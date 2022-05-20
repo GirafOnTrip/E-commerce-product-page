@@ -5,8 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-
+  
   <link rel="stylesheet" href="/design/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -45,12 +44,12 @@
 
           <div class="nav__end">
 
-            <a href="#" class="nav__end__cart">
+            <a href="#" class="nav__end__cart" aria-label="Open/Close Cart">
               <img src="/images/icon-cart.svg" alt="">
               <span class="nav__end__notif"></span>
             </a>
             
-            <a href="#" class="nav__end__avatar">
+            <a href="#" class="nav__end__avatar" aria-hidden="true">
               <img src="/images/image-avatar.png" alt="">
             </a>
 
@@ -171,7 +170,7 @@
           <!-- BUTTON + - -->
           <div class="product__button">
             <button class="product__button__less-more less">−</button>
-            <input class="product__button__number"  type="text" size="1" value="0" readonly>
+            <input class="product__button__number" type="text" size="1" value="0" aria-label = "Items number" readonly>
             <button class="product__button__less-more plus">+</button>
           </div>
           
